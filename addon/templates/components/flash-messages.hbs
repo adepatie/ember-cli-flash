@@ -1,0 +1,7 @@
+{{#each flashes as |flash|}}
+  {{yield (hash
+    component=(component "flash-message" flash=flash)
+    close=(action "close" flash)
+    type=flash.type
+  )}}
+{{/each}}
